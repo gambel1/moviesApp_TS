@@ -1,0 +1,61 @@
+@import-normalize;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fafafa;
+  color: #161616;
+
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 480px /*от 480px и выше*/) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px /*от 768px и выше*/) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px /*от 1200px и выше*/) {
+    width: 1200px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
