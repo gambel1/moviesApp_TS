@@ -17,7 +17,7 @@ interface MovieDetailsPage {
   voteCount: number;
 }
 
-export default function MovieDetailsPage() {
+export default function PageDetails() {
   const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState<MovieDetailsPage | null>(null);
 
