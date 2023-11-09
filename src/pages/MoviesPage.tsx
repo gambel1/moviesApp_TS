@@ -14,7 +14,7 @@ interface Movies {
   vote_count: number;
 }
 
-export default function Projects() {
+export default function MoviesPage() {
   const { search } = useLocation();
   const query = new URLSearchParams(search).get('query') ?? '';
 

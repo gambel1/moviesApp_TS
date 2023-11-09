@@ -3,7 +3,7 @@ import TrendingList from '../components/TrendingList/TrendingList';
 import { fetchTrendMovies } from '../api/fetchApi';
 import { ITrendingListProps } from '../components/TrendingList/TrendingList';
 
-interface HomePage {
+interface HomePageTypes {
   id: number;
   original_title: string;
   poster_path: string;
@@ -15,7 +15,7 @@ export default function VolumeUp() {
   const [movies, setMovies] = useState<ITrendingListProps[] | null>(null);
 
   useEffect(() => {
-    fetchTrendMovies().then(({ results }: { results: HomePage[] }) => {
+    fetchTrendMovies().then(({ results }: { results: HomePageTypes[] }) => {
       const moviesArr: ITrendingListProps[] = results.map(
         ({ id, original_title, poster_path, vote_average, vote_count }) => ({
           id,

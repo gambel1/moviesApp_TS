@@ -8,20 +8,20 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMoviesReviews } from '../../api/fetchApi';
 
-interface Reviews {
+interface ReviewsTypes {
   id: string;
   author: string;
   text: string;
 }
 
-export default function Reevaluation() {
+export default function Reviews() {
   const { movieId } = useParams();
-  const [reviews, setReviews] = useState<Reviews[] | null>(null);
+  const [reviews, setReviews] = useState<ReviewsTypes[] | null>(null);
 
   useEffect(() => {
     if (movieId) {
       fetchMoviesReviews(movieId).then(({ results }) => {
-        const reviewsArr: Reviews[] = results.map(
+        const reviewsArr: ReviewsTypes[] = results.map(
           ({ id, author, content }) => ({
             id,
             author,
