@@ -5,7 +5,7 @@ import { useState, useEffect, lazy, Suspense } from 'react';
 import { useParams, Routes, Route } from 'react-router-dom';
 
 const Cast = lazy(() => import('../components/Cast/Cast'));
-const Reviews = lazy(() => import('../components/Reviews/Reviews'));
+const Reviews = lazy(() => import('../components/Reevaluation/Reevaluation'));
 
 interface MovieDetailsPage {
   title: string;

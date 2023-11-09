@@ -14,7 +14,7 @@ interface Reviews {
   text: string;
 }
 
-export default function Reviews() {
+export default function Reevaluation() {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState<Reviews[] | null>(null);
 
