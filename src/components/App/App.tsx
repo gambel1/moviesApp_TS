@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 const VolumeUp = lazy(() => import('../../pages/VolumeUp'));
-const MoviesPage = lazy(() => import('../../pages/MoviesPage'));
+const Projects = lazy(() => import('../../pages/Projects'));
 const PageDetails = lazy(() => import('../../pages/PageDetails'));
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<VolumeUp />} />
-            <Route path="/movies" element={<MoviesPage />} />
+            <Route path="/movies" element={<Projects />} />
             <Route path="/movies/:movieId/*" element={<PageDetails />} />
             <Route path="*" element={<NotFound />} />
           </Route>
