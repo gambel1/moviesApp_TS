@@ -11,7 +11,7 @@ interface HomePage {
   vote_count: number;
 }
 
-export default function HomePage() {
+export default function VolumeUp() {
   const [movies, setMovies] = useState<ITrendingListProps[] | null>(null);
 
   useEffect(() => {
